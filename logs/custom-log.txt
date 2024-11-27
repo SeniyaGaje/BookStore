@@ -1,0 +1,18 @@
+
+[2024-11-22 00:45:35] Invalid login attempt for email: seniya@gmail.com. Remaining attempts: 4.
+[2024-11-22 00:45:51] Login attempt for email: seniya@gmail.com
+[2024-11-22 00:45:51] Invalid login attempt for email: seniya@gmail.com. Remaining attempts: 3.
+[2024-11-22 00:46:01] Login attempt for email: seniya@gmail.com
+[2024-11-22 00:46:01] Invalid login attempt for email: seniya@gmail.com. Remaining attempts: 2.
+[2024-11-22 00:46:14] Login attempt for email: seniya@gmail.com
+[2024-11-22 00:46:14] Invalid login attempt for email: seniya@gmail.com. Remaining attempts: 1.
+[2024-11-22 00:46:24] Login attempt for email: seniya@gmail.com
+[2024-11-22 00:46:24] Too many failed login attempts for email: seniya@gmail.com. Account locked for 15 minutes.
+[2024-11-22 00:47:46] Login attempt for email: seniya@gmail.com
+[2024-11-22 00:47:46] Account locked for email: seniya@gmail.com. Try again after 14 minutes.
+[2024-11-22 00:49:44] Login attempt for email: seniya02@gmail.com
+[2024-11-22 00:49:44] Successful login for email: seniya02@gmail.com.
+[2024-11-22 01:06:31] Login attempt for email: seniya02@gmail.com
+[2024-11-22 01:06:31] Successful login for email: seniya02@gmail.com.
+[2024-11-27 18:47:09] Login attempt for email: seniya02@gmail.com
+[2024-11-27 18:47:09] Successful login for email: seniya02@gmail.com.
