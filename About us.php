@@ -111,7 +111,7 @@
     <section>
         <h2>Contact Us</h2>
         <p>
-            We would love to hear from you! Visit us at <b>No.215/4 Colombo, SriLanka</b>, give us a call at <b>0123456789</b>, or email us at <b>e.book@email.com</b>.
+            Please Visit us at <b>No.36/5 Colombo, SriLanka</b>, give us a call at <b>0111749656</b>, or email us at <b>ehub@email.com</b>.
 
         </p>
     </section>

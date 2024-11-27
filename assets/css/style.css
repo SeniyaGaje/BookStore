@@ -9,8 +9,9 @@
   /*Color mode HSL(hue, saturation, lightness)*/
   --first-color: hsl(0, 78%, 49%);
   --title-color: hsl(0, 78%, 49%);
-  --text-color: hsl(0, 78%, 49%);
-  --border-color: hsl(230, 50%, 90%);
+  --text-color: hsl(0, 78%, 49%); /* Red */
+
+  --border-color: hsl(0, 85%, 47%);
   --white-color: hsl(0, 0%, 100%);
   --body-color: hsl(230, 100%, 96%);
   --container-color: hsl(230, 100%, 97%);
@@ -36,6 +37,7 @@
   --z-tooltip: 10;
   --z-fixed: 100;
 }
+
 
 /* Responsive typography */
 @media screen and (min-width: 1150px) {

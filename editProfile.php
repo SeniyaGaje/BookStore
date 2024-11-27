@@ -29,7 +29,7 @@ if (isset($_POST['submit'])) {
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@500&family=Montserrat:wght@400;500;600&display=swap");
 
-        body {}
+       
 
         form {
 

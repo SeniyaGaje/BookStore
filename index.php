@@ -47,7 +47,7 @@ include "./shared/DBconnection.php";
                <li class="nav__item">
                   <a href="#featured" class="nav__link">
                      <i class="ri-book-3-line"></i>
-                     <span>Featured</span>
+                     <span>Best Seller</span>
                   </a>
                </li>
 
@@ -61,14 +61,14 @@ include "./shared/DBconnection.php";
                <li class="nav__item">
                   <a href="#new" class="nav__link">
                      <i class="ri-bookmark-line"></i>
-                     <span>New Books</span>
+                     <span>Latest</span>
                   </a>
                </li>
 
                <li class="nav__item">
                   <a href="#testimonial" class="nav__link">
                      <i class="ri-message-3-line"></i>
-                     <span>Testimonial</span>
+                     <span>Reviews</span>
                   </a>
                </li>
             </ul>
@@ -208,22 +208,24 @@ include "./shared/DBconnection.php";
       <!-- SERVICES -->
       <section class="services section">
          <div class="services__container container grid">
+
+         <article class="services__card">
+               <i class="ri-lock-2-line"></i>
+               <h3 class="services__title">Secure Payment</h3>
+               <p class="services__description">Secure Online Payments</p>
+            </article>
+
             <article class="services__card">
                <i class="ri-truck-line"></i>
                <h3 class="services__title">Free Shipping</h3>
-               <p class="services__description">Order More Than rs 1000</p>
+               <p class="services__description">Order More Than Rs 2000</p>
             </article>
 
-            <article class="services__card">
-               <i class="ri-lock-2-line"></i>
-               <h3 class="services__title">Secure Payment</h3>
-               <p class="services__description"> 100% Secure Payment</p>
-            </article>
-
+          
             <article class="services__card">
                <i class="ri-customer-service-2-line"></i>
-               <h3 class="services__title">24/7 Support</h3>
-               <p class="services__description">Call us anytime</p>
+               <h3 class="services__title">Round the Clock Service</h3>
+               <p class="services__description">Contact Us Anytime</p>
             </article>
          </div>
       </section>
@@ -231,7 +233,7 @@ include "./shared/DBconnection.php";
       <!-- FEATURED -->
       <section class="featured section" id="featured">
          <h2 class="section__title">
-            Featured Books
+            Best Sellers
          </h2>
 
          <div class="featured__container container">
@@ -249,7 +251,7 @@ include "./shared/DBconnection.php";
                      <button class="button">Add To Cart</button>
 
                      <div class="featured__actions">
-                        <button><i class="ri-search-line"></i></button>
+                        
                         <button><i class="ri-heart-3-line"></i></button>
                         <button><i class="ri-eye-line"></i></button>
                      </div>
@@ -260,50 +262,32 @@ include "./shared/DBconnection.php";
 
                      <h2 class="featured__title">Lord of the Rings</h2>
                      <div class="featured__prices">
-                        <span class="featured__discount">$11.99</span>
-                        <span class="featured__price">$19.99</span>
+                        <span class="featured__discount">Rs 2500</span>
+                        <span class="featured__price">Rs 2900</span>
                      </div>
 
                      <button class="button">Add To Cart</button>
 
                      <div class="featured__actions">
-                        <button><i class="ri-search-line"></i></button>
                         <button><i class="ri-heart-3-line"></i></button>
                         <button><i class="ri-eye-line"></i></button>
                      </div>
                   </article>
 
-                  <article class="featured__card swiper-slide">
-                     <img src="assets/img/little_women.jpg" alt="LittleWomen_book" class="featured__img">
 
-                     <h2 class="featured__title">Little Womenk</h2>
+
+                  <article class="featured__card swiper-slide">
+                     <img src="assets/img/GoT.jpg" alt="Narnia_book" class="featured__img">
+
+                     <h2 class="featured__title">Game Of Thrones</h2>
                      <div class="featured__prices">
-                        <span class="featured__discount">$11.99</span>
-                        <span class="featured__price">$19.99</span>
+                        <span class="featured__discount">Rs 3000</span>
+                        <span class="featured__price">Rs 3500</span>
                      </div>
 
                      <button class="button">Add To Cart</button>
 
                      <div class="featured__actions">
-                        <button><i class="ri-search-line"></i></button>
-                        <button><i class="ri-heart-3-line"></i></button>
-                        <button><i class="ri-eye-line"></i></button>
-                     </div>
-                  </article>
-
-                  <article class="featured__card swiper-slide">
-                     <img src="assets/img/narnia.jpg" alt="Narnia_book" class="featured__img">
-
-                     <h2 class="featured__title">NARNIA</h2>
-                     <div class="featured__prices">
-                        <span class="featured__discount">$11.99</span>
-                        <span class="featured__price">$19.99</span>
-                     </div>
-
-                     <button class="button">Add To Cart</button>
-
-                     <div class="featured__actions">
-                        <button><i class="ri-search-line"></i></button>
                         <button><i class="ri-heart-3-line"></i></button>
                         <button><i class="ri-eye-line"></i></button>
                      </div>
@@ -312,16 +296,15 @@ include "./shared/DBconnection.php";
                   <article class="featured__card swiper-slide">
                      <img src="assets/img/ice_and_fire.jpg" alt="GameOfThrons_book" class="featured__img">
 
-                     <h2 class="featured__title">The world of ICE & FIRE</h2>
+                     <h2 class="featured__title">The Song of ICE & FIRE</h2>
                      <div class="featured__prices">
-                        <span class="featured__discount">$11.99</span>
-                        <span class="featured__price">$19.99</span>
+                        <span class="featured__discount">Rs 1400
+                        <span class="featured__price">Rs 19999</span>
                      </div>
 
                      <button class="button">Add To Cart</button>
 
                      <div class="featured__actions">
-                        <button><i class="ri-search-line"></i></button>
                         <button><i class="ri-heart-3-line"></i></button>
                         <button><i class="ri-eye-line"></i></button>
                      </div>
@@ -363,23 +346,7 @@ include "./shared/DBconnection.php";
                      </div>
                   </article>
 
-                  <article class="featured__card swiper-slide">
-                     <img src="assets/img/eragon.jpg" alt="Eragon_book" class="featured__img">
-
-                     <h2 class="featured__title">Eragon</h2>
-                     <div class="featured__prices">
-                        <span class="featured__discount">$11.99</span>
-                        <span class="featured__price">$19.99</span>
-                     </div>
-
-                     <button class="button">Add To Cart</button>
-
-                     <div class="featured__actions">
-                        <button><i class="ri-search-line"></i></button>
-                        <button><i class="ri-heart-3-line"></i></button>
-                        <button><i class="ri-eye-line"></i></button>
-                     </div>
-                  </article>
+                
 
                   <article class="featured__card swiper-slide">
                      <img src="assets/img/hunger_games.jpg" alt="HungeGames_book" class="featured__img">
