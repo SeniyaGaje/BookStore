@@ -185,19 +185,19 @@ include "./shared/DBconnection.php";
                <div class="home__swiper swiper">
                   <div class="swiper-wrapper">
                      <article class="home__article swiper-slide">
-                        <img src="assets/img/Wuthering_Heights.jpg" alt="image" class="home__img">
+                        <img src="assets/img/lightning.jpg" alt="image" class="home__img">
                      </article>
 
                      <article class="home__article swiper-slide">
-                        <img src="assets/img/Alice_in_the_wonderland.jpg" alt="image" class="home__img">
+                        <img src="assets/img/ferno.jpg" alt="image" class="home__img">
                      </article>
 
                      <article class="home__article swiper-slide">
-                        <img src="assets/img/charlotte_bronte.jpg" alt="image" class="home__img">
+                        <img src="assets/img/tom.jpg" alt="image" class="home__img">
                      </article>
 
                      <article class="home__article swiper-slide">
-                        <img src="assets/img/oscar_wilde.jpg" alt="image" class="home__img">
+                        <img src="assets/img/black.jpg" alt="image" class="home__img">
                      </article>
                   </div>
                </div>
@@ -211,13 +211,13 @@ include "./shared/DBconnection.php";
             <article class="services__card">
                <i class="ri-truck-line"></i>
                <h3 class="services__title">Free Shipping</h3>
-               <p class="services__description">Order More Than $100</p>
+               <p class="services__description">Order More Than rs 1000</p>
             </article>
 
             <article class="services__card">
                <i class="ri-lock-2-line"></i>
                <h3 class="services__title">Secure Payment</h3>
-               <p class="services__description">100% Secure Payment</p>
+               <p class="services__description"> 100% Secure Payment</p>
             </article>
 
             <article class="services__card">
@@ -242,8 +242,8 @@ include "./shared/DBconnection.php";
 
                      <h2 class="featured__title">Harry Potter</h2>
                      <div class="featured__prices">
-                        <span class="featured__discount">$11.99</span>
-                        <span class="featured__price">$19.99</span>
+                        <span class="featured__discount">Rs 1100</span>
+                        <span class="featured__price">Rs 1990</span>
                      </div>
 
                      <button class="button">Add To Cart</button>
