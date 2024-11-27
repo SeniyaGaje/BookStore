@@ -11,7 +11,7 @@ include "./shared/DBconnection.php";
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
    <!-- FAVICON -->
-   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+   <link rel="shortcut icon" href="assets/img/book.png" type="image/x-icon">
 
    <!-- REMIXICONS -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
@@ -24,7 +24,7 @@ include "./shared/DBconnection.php";
    <!-- CSS -->
    <link rel="stylesheet" href="assets/css/style.css">
 
-   <title>book website</title>
+   <title>Book Hub</title>
 </head>
 
 <body>
@@ -32,7 +32,7 @@ include "./shared/DBconnection.php";
    <header class="header" id="header">
       <nav class="nav container">
          <a href="#" class="nav__logo">
-            <i class="ri-book-3-line"></i> E-Book
+            <i class="ri-book-3-line"></i> Book Hub
          </a>
 
          <div class="nav__menu">
@@ -168,15 +168,14 @@ include "./shared/DBconnection.php";
          <div class="home__container container grid">
             <div class="home__data">
                <h1 class="home__title">
-                  Browse & <br>
-                  Select E-Books
+               Discover a world of stories 
+               with our vast collection of books
                </h1>
 
                <p class="home__description">
-                  Find the best e-books from your favorite
-                  writers, explore hundreds of books with all
-                  possible categories, take advantage of the
-                  50% discount and much more.
+               Embark on a journey through words and imagination. From timeless classics to modern masterpieces,
+                uncover stories that inspire, thrill, and captivate. Dive into a world where every page turns into an adventure,
+                 and every book feels like home. Your next story awaits—start exploring today!
                </p>
 
                <a href="./About us.php" class="button">Explore Now</a>
@@ -1050,8 +1049,8 @@ include "./shared/DBconnection.php";
 
                   <li>
                      <address class="footer__info">
-                        e.book@email.com <br>
-                        0123456789
+                        bookhub@email.com <br>
+                        01114856869
                      </address>
                   </li>
                </ul>
@@ -1078,7 +1077,7 @@ include "./shared/DBconnection.php";
       </div>
 
       <span class="footer__copy">
-         &#169; All Rights Reserved By Chamodya Piyasarani
+         &#169; All Rights Reserved By Book Hub
       </span>
    </footer>
 

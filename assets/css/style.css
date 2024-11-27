@@ -7,9 +7,9 @@
 
   /* Colors */
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(230, 62%, 56%);
-  --title-color: hsl(230, 70%, 16%);
-  --text-color: hsl(230, 16%, 45%);
+  --first-color: hsl(0, 78%, 49%);
+  --title-color: hsl(0, 78%, 49%);
+  --text-color: hsl(0, 78%, 49%);
   --border-color: hsl(230, 50%, 90%);
   --white-color: hsl(0, 0%, 100%);
   --body-color: hsl(230, 100%, 96%);
@@ -106,7 +106,7 @@ img {
 /* THEME */
 /* Variables Dark theme */
 body.dark-theme {
-  --title-color: hsl(230, 48%, 85%);
+  --title-color: hsl(0, 70%, 51%);
   --text-color: hsl(230, 16%, 70%);
   --border-color: hsl(230, 12%, 18%);
   --body-color: hsl(230, 12%, 8%);
