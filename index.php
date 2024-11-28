@@ -178,7 +178,7 @@ include "./shared/DBconnection.php";
                  and every book feels like home. Your next story awaits—start exploring today!
                </p>
 
-               <a href="./About us.php" class="button">Explore Now</a>
+               <a href="./About us.php" class="button">About Us</a>
             </div>
 
             <div class="home__images">
@@ -310,42 +310,7 @@ include "./shared/DBconnection.php";
                      </div>
                   </article>
 
-                  <article class="featured__card swiper-slide">
-                     <img src="assets/img/the_grate_gatsby.jpg" alt="TheGrateGasby_book" class="featured__img">
-
-                     <h2 class="featured__title">The Grate Gastby</h2>
-                     <div class="featured__prices">
-                        <span class="featured__discount">$11.99</span>
-                        <span class="featured__price">$19.99</span>
-                     </div>
-
-                     <button class="button">Add To Cart</button>
-
-                     <div class="featured__actions">
-                        <button><i class="ri-search-line"></i></button>
-                        <button><i class="ri-heart-3-line"></i></button>
-                        <button><i class="ri-eye-line"></i></button>
-                     </div>
-                  </article>
-
-                  <article class="featured__card swiper-slide">
-                     <img src="assets/img/the_book_theft.jpg" alt="TheBookThife_book" class="featured__img">
-
-                     <h2 class="featured__title">The Book Thief</h2>
-                     <div class="featured__prices">
-                        <span class="featured__discount">$11.99</span>
-                        <span class="featured__price">$19.99</span>
-                     </div>
-
-                     <button class="button">Add To Cart</button>
-
-                     <div class="featured__actions">
-                        <button><i class="ri-search-line"></i></button>
-                        <button><i class="ri-heart-3-line"></i></button>
-                        <button><i class="ri-eye-line"></i></button>
-                     </div>
-                  </article>
-
+                  
                 
 
                   <article class="featured__card swiper-slide">
@@ -353,8 +318,8 @@ include "./shared/DBconnection.php";
 
                      <h2 class="featured__title">Hunger Games</h2>
                      <div class="featured__prices">
-                        <span class="featured__discount">$11.99</span>
-                        <span class="featured__price">$19.99</span>
+                        <span class="featured__discount">Rs 2500</span>
+                        <span class="featured__price">Rs 3000</span>
                      </div>
 
                      <button class="button">Add To Cart</button>
@@ -367,12 +332,12 @@ include "./shared/DBconnection.php";
                   </article>
 
                   <article class="featured__card swiper-slide">
-                     <img src="assets/img/percy_jacson.jpg" alt="Percy_Jacson_book" class="featured__img">
+                     <img src="assets/img/percy_jacson.jpg" alt="Percy_Jackson_book" class="featured__img">
 
-                     <h2 class="featured__title">Percy Jacson</h2>
+                     <h2 class="featured__title">Percy Jackson</h2>
                      <div class="featured__prices">
-                        <span class="featured__discount">$11.99</span>
-                        <span class="featured__price">$19.99</span>
+                        <span class="featured__discount">Rs 3100</span>
+                        <span class="featured__price">Rs 3500</span>
                      </div>
 
                      <button class="button">Add To Cart</button>
@@ -401,22 +366,20 @@ include "./shared/DBconnection.php";
          <div class="discount__container container grid">
             <div class="discount__data">
                <h2 class="discount__title section__title">
-                  Up To 50% Discount
+                  Special Discounts
                </h2>
 
                <p class="discount__description">
-                  Take advantage of the discount days we
-                  have for you, buy books from your favorite
-                  writers, the more you buy, the more
-                  discounts we have for you.
+                  Receive 50% Discounts for the special Wimpy Kid editions<br>
+                  only available for a limited time.
                </p>
 
-               <a href="#" class="button">Shop Now</a>
+               <a href="#" class="button">Buy Now</a>
             </div>
 
             <div class="discount__images">
-               <img src="assets/img/discount_1.jpg" alt="Pride&pregeudies_book" class="discount__img-1">
-               <img src="assets/img/discount_2.jpg" alt="Mother_book" class="discount__img-2">
+               <img src="assets/img/rodrick.jpg" alt="Pride&pregeudies_book" class="discount__img-1">
+               <img src="assets/img/wimpy.jpg" alt="Mother_book" class="discount__img-2">
             </div>
          </div>
       </section>
@@ -476,8 +439,8 @@ include "./shared/DBconnection.php";
                      <div>
                         <h2 class="new__title">A tea spoon of heart and sea</h2>
                         <div class="new__prices">
-                           <span class="new__discount">$7.99</span>
-                           <span class="new__price">$14.99</span>
+                           <span class="new__discount">Rs 1500</span>
+                           <span class="new__price">Rs 1900</span>
                         </div>
 
                         <div class="new__stars">
@@ -516,8 +479,8 @@ include "./shared/DBconnection.php";
                      <div>
                         <h2 class="new__title">Memoris Combatant</h2>
                         <div class="new__prices">
-                           <span class="new__discount">$7.99</span>
-                           <span class="new__price">$14.99</span>
+                           <span class="new__discount">Rs 1200</span>
+                           <span class="new__price">Rs 1450</span>
                         </div>
 
                         <div class="new__stars">
@@ -841,12 +804,12 @@ include "./shared/DBconnection.php";
       <!-- JOIN -->
       <section class="join section">
          <div class="join__container">
-            <img src="assets/img/join.jpg" alt="image" class="join__bg">
+            <img src="assets/img/library.jpg" alt="image" class="join__bg">
 
             <div class="join__data container grid">
                <h2 class="join__title section__title">
                   Subscribe To Receive <br>
-                  The Latest Updates
+                  Our Latest Offers and Books.
                </h2>
 
                <form action="" class="join__form">
@@ -860,7 +823,7 @@ include "./shared/DBconnection.php";
       <!-- TESTIMONIAL -->
       <section class="testimonial section" id="testimonial">
          <h2 class="section__title">
-            Customer Opinions
+            Our Latest Reviews
          </h2>
 
          <div class="testimonial__container container">
@@ -948,13 +911,13 @@ include "./shared/DBconnection.php";
       <div class="footer__container container grid">
          <div>
             <a href="#" class="footer__logo">
-               <i class="ri-book-3-line"></i> E-Book
+               <i class="ri-book-3-line"></i> Book Hub
             </a>
 
             <p class="footer__description">
                Find and explore the best <br>
                eBooks from all your <br>
-               favorite writers.
+               favorite Authors form Book Hub.
             </p>
          </div>
 
@@ -1009,8 +972,9 @@ include "./shared/DBconnection.php";
                <ul class="footer__links">
                   <li>
                      <address class="footer__info">
-                        No.215/4 <br>
-                        Colombo, SriLanka
+                        No.36/2 <br>
+                        Galle Road Colombo<br>
+                        SriLanka
                      </address>
                   </li>
 
