@@ -79,13 +79,13 @@ let swiperHome = new Swiper('.home__swiper', {
   centeredSlides: 'auto',
 
   autoplay: {
-    delay: 3000,
+    delay: 1000,
     disableOnInteraction: false,
   },
-
+ speed: 800, 
   breakpoints:{
     1220: {
-      spaceBetween: -32,
+      spaceBetween: 16,
     },
   },
 })
@@ -118,7 +118,7 @@ let swiperNew = new Swiper('.new__swiper', {
   slidesPerView: 'auto',
 
   breakpoints:{
-    1150: {
+    1550: {
       slidesPerView: 3,
     },
   },
