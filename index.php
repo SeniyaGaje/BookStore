@@ -165,31 +165,15 @@ include "./shared/DBconnection.php";
    <main class="main">
       <!--HOME-->
       <section class="home section" id="home">
-         <div class="home__container container grid">
-            <div class="home__data">
-               <h1 class="home__title">
-               Discover a world of stories 
-               with our vast collection of books
-               </h1>
-
-               <p class="home__description">
-               Embark on a journey through words and imagination. From timeless classics to modern masterpieces,
-                uncover stories that inspire, thrill, and captivate. Dive into a world where every page turns into an adventure,
-                 and every book feels like home. Your next story awaits—start exploring today!
-               </p>
-
-               <a href="./About us.php" class="button">About Us</a>
-            </div>
-
-            <div class="home__images">
+      <div class="home__images">
                <div class="home__swiper swiper">
                   <div class="swiper-wrapper">
                      <article class="home__article swiper-slide">
-                        <img src="assets/img/lightning.jpg" alt="image" class="home__img">
+                        <img src="assets/img/lightningT.jpg" alt="image" class="home__img">
                      </article>
 
                      <article class="home__article swiper-slide">
-                        <img src="assets/img/ferno.jpg" alt="image" class="home__img">
+                        <img src="assets/img/titan.jpg" alt="image" class="home__img">
                      </article>
 
                      <article class="home__article swiper-slide">
@@ -199,10 +183,37 @@ include "./shared/DBconnection.php";
                      <article class="home__article swiper-slide">
                         <img src="assets/img/black.jpg" alt="image" class="home__img">
                      </article>
+                     <article class="home__article swiper-slide">
+                        <img src="assets/img/GoT.jpg" alt="image" class="home__img">
+                     </article>
+                     <article class="home__article swiper-slide">
+                        <img src="assets/img/wimpy.jpg" alt="image" class="home__img">
+                     </article>
+                     <article class="home__article swiper-slide">
+                        <img src="assets/img/jaws.jpg" alt="image" class="home__img">
+                     </article>
                   </div>
                </div>
             </div>
          </div>
+
+         <div class="home__container container grid">
+            <div class="home__data">
+               <h1 class="home__title">
+               Discover a world of stories  with our vast collection of books
+               </h1>
+
+               <p class="home__description">
+               Embark on a journey through words and imagination. From timeless classics to modern masterpieces,
+                uncover stories that inspire, thrill, and captivate. Dive into a world where every page turns into an adventure,
+                 and every book feels like home. Your next story awaits—start exploring today!
+               </p>
+
+               <a href="./About us.php" class="button">About Us</a>
+               
+            </div>
+
+           
       </section>
 
       <!-- SERVICES -->
@@ -239,25 +250,44 @@ include "./shared/DBconnection.php";
          <div class="featured__container container">
             <div class="featured__swiper swiper">
                <div class="swiper-wrapper">
-                  <article class="featured__card swiper-slide">
-                     <img src="assets/img/harry_potter.jpg" alt="harry_potter_book" class="featured__img">
 
-                     <h2 class="featured__title">Harry Potter</h2>
+
+               <article class="featured__card swiper-slide">
+                     <img src="assets/img/GoT.jpg" alt="Narnia_book" class="featured__img">
+
+                     <h2 class="featured__title">Game Of Thrones</h2>
                      <div class="featured__prices">
-                        <span class="featured__discount">Rs 1100</span>
-                        <span class="featured__price">Rs 1990</span>
+                        <span class="featured__discount">Rs 3000</span>
+                        <span class="featured__price">Rs 3500</span>
                      </div>
 
                      <button class="button">Add To Cart</button>
 
                      <div class="featured__actions">
-                        
                         <button><i class="ri-heart-3-line"></i></button>
                         <button><i class="ri-eye-line"></i></button>
                      </div>
                   </article>
 
+
                   <article class="featured__card swiper-slide">
+                     <img src="assets/img/dog days.jpeg" alt="Percy_Jackson_book" class="featured__img">
+
+                     <h2 class="featured__title">Dog Days</h2>
+                     <div class="featured__prices">
+                        <span class="featured__discount">Rs 1100</span>
+                        <span class="featured__price">Rs 1500</span>
+                     </div>
+
+                     <button class="button">Add To Cart</button>
+
+                     <div class="featured__actions">
+                        <button><i class="ri-heart-3-line"></i></button>
+                        <button><i class="ri-eye-line"></i></button>
+                     </div>
+                  </article>                 
+
+               <article class="featured__card swiper-slide">
                      <img src="assets/img/lord_of_the_rings.jpg" alt="lordOfTheRings_book" class="featured__img">
 
                      <h2 class="featured__title">Lord of the Rings</h2>
@@ -274,20 +304,20 @@ include "./shared/DBconnection.php";
                      </div>
                   </article>
 
-
-
+                  
                   <article class="featured__card swiper-slide">
-                     <img src="assets/img/GoT.jpg" alt="Narnia_book" class="featured__img">
+                     <img src="assets/img/harry_potter.jpg" alt="harry_potter_book" class="featured__img">
 
-                     <h2 class="featured__title">Game Of Thrones</h2>
+                     <h2 class="featured__title">Harry Potter</h2>
                      <div class="featured__prices">
-                        <span class="featured__discount">Rs 3000</span>
-                        <span class="featured__price">Rs 3500</span>
+                        <span class="featured__discount">Rs 1100</span>
+                        <span class="featured__price">Rs 1990</span>
                      </div>
 
                      <button class="button">Add To Cart</button>
 
                      <div class="featured__actions">
+                        
                         <button><i class="ri-heart-3-line"></i></button>
                         <button><i class="ri-eye-line"></i></button>
                      </div>
@@ -310,8 +340,7 @@ include "./shared/DBconnection.php";
                      </div>
                   </article>
 
-                  
-                
+                                 
 
                   <article class="featured__card swiper-slide">
                      <img src="assets/img/hunger_games.jpg" alt="HungeGames_book" class="featured__img">
@@ -331,23 +360,7 @@ include "./shared/DBconnection.php";
                      </div>
                   </article>
 
-                  <article class="featured__card swiper-slide">
-                     <img src="assets/img/percy_jacson.jpg" alt="Percy_Jackson_book" class="featured__img">
-
-                     <h2 class="featured__title">Percy Jackson</h2>
-                     <div class="featured__prices">
-                        <span class="featured__discount">Rs 3100</span>
-                        <span class="featured__price">Rs 3500</span>
-                     </div>
-
-                     <button class="button">Add To Cart</button>
-
-                     <div class="featured__actions">
-                        <button><i class="ri-search-line"></i></button>
-                        <button><i class="ri-heart-3-line"></i></button>
-                        <button><i class="ri-eye-line"></i></button>
-                     </div>
-                  </article>
+                 
                </div>
 
                <div class="swiper-button-prev">
@@ -394,13 +407,13 @@ include "./shared/DBconnection.php";
             <div class="new__swiper swiper">
                <div class="swiper-wrapper">
                   <a href="#" class="new__card swiper-slide">
-                     <img src="assets/img/new_1.jpg" alt="image" class="new__img">
+                     <img src="assets/img/titan.jpg" alt="image" class="new__img">
 
                      <div>
-                        <h2 class="new__title">The Dragon Knight's Curse</h2>
+                        <h2 class="new__title">Percy jackson Titan's Curse</h2>
                         <div class="new__prices">
-                           <span class="new__discount">$7.99</span>
-                           <span class="new__price">$14.99</span>
+                           <span class="new__discount">Rs 1999</span>
+                           <span class="new__price">2999</span>
                         </div>
 
                         <div class="new__stars">
@@ -408,7 +421,7 @@ include "./shared/DBconnection.php";
                            <i class="ri-star-fill"></i>
                            <i class="ri-star-fill"></i>
                            <i class="ri-star-fill"></i>
-                           <i class="ri-star-half-fill"></i>
+                           <i class="ri-star-fill"></i>
                         </div>
                      </div>
                   </a>
@@ -419,8 +432,8 @@ include "./shared/DBconnection.php";
                      <div>
                         <h2 class="new__title">The HOBBIT</h2>
                         <div class="new__prices">
-                           <span class="new__discount">$7.99</span>
-                           <span class="new__price">$14.99</span>
+                           <span class="new__discount">Rs 2500
+                           <span class="new__price">Rs 3500</span>
                         </div>
 
                         <div class="new__stars">
@@ -439,16 +452,15 @@ include "./shared/DBconnection.php";
                      <div>
                         <h2 class="new__title">A tea spoon of heart and sea</h2>
                         <div class="new__prices">
-                           <span class="new__discount">Rs 1500</span>
-                           <span class="new__price">Rs 1900</span>
+                           <span class="new__discount">Rs 500</span>
+                           <span class="new__price">Rs 1100</span>
                         </div>
 
                         <div class="new__stars">
                            <i class="ri-star-fill"></i>
                            <i class="ri-star-fill"></i>
                            <i class="ri-star-fill"></i>
-                           <i class="ri-star-fill"></i>
-                           <i class="ri-star-half-fill"></i>
+                           
                         </div>
                      </div>
                   </a>
@@ -459,7 +471,7 @@ include "./shared/DBconnection.php";
                      <div>
                         <h2 class="new__title">The Goldfinch</h2>
                         <div class="new__prices">
-                           <span class="new__discount">$7.99</span>
+                           <span class="new__discount">Rs 7.99</span>
                            <span class="new__price">$14.99</span>
                         </div>
 
@@ -539,8 +551,8 @@ include "./shared/DBconnection.php";
                      <div>
                         <h2 class="new__title">Heart of a SAMURAI</h2>
                         <div class="new__prices">
-                           <span class="new__discount">$7.99</span>
-                           <span class="new__price">$14.99</span>
+                           <span class="new__discount">Rs 1099</span>
+                           <span class="new__price">Rs 800</span>
                         </div>
 
                         <div class="new__stars">
@@ -559,8 +571,8 @@ include "./shared/DBconnection.php";
                      <div>
                         <h2 class="new__title">FRANKENSTEIN</h2>
                         <div class="new__prices">
-                           <span class="new__discount">$7.99</span>
-                           <span class="new__price">$14.99</span>
+                           <span class="new__discount">Rs 2500</span>
+                           <span class="new__price">Rs 1900</span>
                         </div>
 
                         <div class="new__stars">
@@ -598,13 +610,13 @@ include "./shared/DBconnection.php";
             <div class="new__swiper swiper">
                <div class="swiper-wrapper">
                   <a href="#" class="new__card swiper-slide">
-                     <img src="assets/img/new_10.jpg" alt="image" class="new__img">
+                     <img src="assets/img/jaws.jpg" alt="image" class="new__img">
 
                      <div>
-                        <h2 class="new__title">All my friends are DEAD</h2>
+                        <h2 class="new__title">Jaws</h2>
                         <div class="new__prices">
-                           <span class="new__discount">$7.99</span>
-                           <span class="new__price">$14.99</span>
+                           <span class="new__discount">Rs 1500</span>
+                           <span class="new__price">Rs 1999</span>
                         </div>
 
                         <div class="new__stars">
@@ -612,7 +624,8 @@ include "./shared/DBconnection.php";
                            <i class="ri-star-fill"></i>
                            <i class="ri-star-fill"></i>
                            <i class="ri-star-fill"></i>
-                           <i class="ri-star-half-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           
                         </div>
                      </div>
                   </a>
@@ -623,8 +636,8 @@ include "./shared/DBconnection.php";
                      <div>
                         <h2 class="new__title">FRANKENSTEIN</h2>
                         <div class="new__prices">
-                           <span class="new__discount">$7.99</span>
-                           <span class="new__price">$14.99</span>
+                           <span class="new__discount">Rs 1400</span>
+                           <span class="new__price">Rs 2000</span>
                         </div>
 
                         <div class="new__stars">
@@ -638,13 +651,13 @@ include "./shared/DBconnection.php";
                   </a>
 
                   <a href="#" class="new__card swiper-slide">
-                     <img src="assets/img/new_8.jpg" alt="image" class="new__img">
+                     <img src="assets/img/image.png" alt="image" class="new__img">
 
                      <div>
-                        <h2 class="new__title">Heart of a SAMURAI</h2>
+                        <h2 class="new__title">Harry Potter Deluxe Edition</h2>
                         <div class="new__prices">
-                           <span class="new__discount">$7.99</span>
-                           <span class="new__price">$14.99</span>
+                           <span class="new__discount">Rs 3000</span>
+                           <span class="new__price">Rs 3500</span>
                         </div>
 
                         <div class="new__stars">
@@ -652,7 +665,7 @@ include "./shared/DBconnection.php";
                            <i class="ri-star-fill"></i>
                            <i class="ri-star-fill"></i>
                            <i class="ri-star-fill"></i>
-                           <i class="ri-star-half-fill"></i>
+                           <i class="ri-star-fill"></i>
                         </div>
                      </div>
                   </a>
@@ -830,12 +843,11 @@ include "./shared/DBconnection.php";
             <div class="testimonial__swiper swiper">
                <div class="swiper-wrapper">
                   <article class="testimonial__card swiper-slide">
-                     <img src="assets/img/test_1.jpeg" alt="img" class="testimonial__img">
+                     <img src="assets/img/prof3.jpg" alt="img" class="testimonial__img">
 
-                     <h2 class="testimonial__title">Tom Frank</h2>
+                     <h2 class="testimonial__title">Russel Arnold</h2>
                      <p class="testimonial__description">
-                        The best website to buy books, the purchase
-                        is very easy to make and has great discounts.
+                        Very nice discounts and great customer support.
                      </p>
 
                      <div class="testimonial__stars">
@@ -848,12 +860,11 @@ include "./shared/DBconnection.php";
                   </article>
 
                   <article class="testimonial__card swiper-slide">
-                     <img src="assets/img/test_2.jpeg" alt="img" class="testimonial__img">
+                     <img src="assets/img/prof2.png" alt="img" class="testimonial__img">
 
-                     <h2 class="testimonial__title">Natalia Lopezz</h2>
+                     <h2 class="testimonial__title">Romesh Ranganathan</h2>
                      <p class="testimonial__description">
-                        The best website to buy books, the purchase
-                        is very easy to make and has great discounts.
+                        Found My desired Books for a reasonable price
                      </p>
 
                      <div class="testimonial__stars">
@@ -861,17 +872,16 @@ include "./shared/DBconnection.php";
                         <i class="ri-star-fill"></i>
                         <i class="ri-star-fill"></i>
                         <i class="ri-star-fill"></i>
-                        <i class="ri-star-half-fill"></i>
+                       
                      </div>
                   </article>
 
                   <article class="testimonial__card swiper-slide">
-                     <img src="assets/img/test_3.jpeg" alt="img" class="testimonial__img">
+                     <img src="assets/img/prof1.png" alt="img" class="testimonial__img">
 
-                     <h2 class="testimonial__title">Pasindu Sahansith</h2>
+                     <h2 class="testimonial__title">Kamal Ananda</h2>
                      <p class="testimonial__description">
-                        The best website to buy books, the purchase
-                        is very easy to make and has great discounts.
+                        Very Easy to purchase and select books with a good range of options.
                      </p>
 
                      <div class="testimonial__stars">
@@ -879,7 +889,7 @@ include "./shared/DBconnection.php";
                         <i class="ri-star-fill"></i>
                         <i class="ri-star-fill"></i>
                         <i class="ri-star-fill"></i>
-                        <i class="ri-star-half-fill"></i>
+                        <i class="ri-star-fill"></i>
                      </div>
                   </article>
 

@@ -9,12 +9,12 @@
   /*Color mode HSL(hue, saturation, lightness)*/
   --first-color: hsl(0, 78%, 49%);
   --title-color: hsl(0, 78%, 49%);
-  --text-color: hsl(0, 78%, 49%); /* Red */
+  --text-color: hsl(0, 0%, 0%); /* Red */
 
   --border-color: hsl(0, 85%, 47%);
   --white-color: hsl(0, 0%, 100%);
-  --body-color: hsl(230, 100%, 96%);
-  --container-color: hsl(230, 100%, 97%);
+  --body-color: hsl(0, 0%, 100%);
+  --container-color: hsl(0, 0%, 100%);
 
   /* Font and typography */
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -328,6 +328,7 @@ body.dark-theme {
   padding: 1.5rem;
   text-align: center;
   transition: top 0.4s;
+  
 }
 
 .login__form {
@@ -339,6 +340,7 @@ body.dark-theme {
 
 .login__title {
   font-size: var(--h2-font-size);
+  
 }
 
 .login__group {

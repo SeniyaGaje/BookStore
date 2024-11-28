@@ -9,7 +9,7 @@
     <div class="login__group grid">
         <div>
             <label for="login-email" class="login__label">Email</label>
-            <input type="email" placeholder="Write your email" id="login-email" name="login-email" class="login__input" maxlength="45" required>
+            <input type="email" placeholder="Enter your email" id="login-email" name="login-email" class="login__input" maxlength="45" required>
         </div>
 
         <div style="position: relative;">
@@ -26,10 +26,10 @@
     </div>
     <div>
         <span class="login__signup">
-            You do not have an account? <a href="#" onClick="authChange('register');">Sign up</a>
+            do not have an account? <a href="#" onClick="authChange('register');">Sign up</a>
         </span>
         <a href="forgotPassword.php" class="login__forgot">
-            You forgot your password
+            forgot password
         </a>
 
         <button type="submit" class="login__button button" name="submit">Log In</button>
