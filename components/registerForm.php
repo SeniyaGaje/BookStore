@@ -53,7 +53,7 @@
     </div>
     <div>
         <span class="SignUp__signIn">
-            already have an account <a href="#" onClick="authChange('login');">Sign In</a>
+            Already have an account <a href="#" onClick="authChange('login');">Log In</a>
         </span>
         <button type="submit" id="loginsubmit" class="SignUp__button button" name="submit" disabled>Submit</button>
     </div>

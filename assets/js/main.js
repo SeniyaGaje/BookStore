@@ -73,7 +73,7 @@ window.addEventListener('scroll', shadowHeader)
 /* HOME SWIPER */
 let swiperHome = new Swiper('.home__swiper', {
   loop: true,
-  spaceBetween: -24,
+  spaceBetween: 16,
   grabCursor: true,
   slidesPerView: 'auto',
   centeredSlides: 'auto',
