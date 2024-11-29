@@ -98,7 +98,7 @@ if (isset($_POST['submit'])) {
 
         h2 {
             text-align: center;
-            color: hsl(230, 62%, 56%);
+            color: hsl(0, 78%, 49%);
             margin-bottom: 1rem;
             font-size: 24px;
         }
@@ -124,7 +124,7 @@ if (isset($_POST['submit'])) {
             padding: 10px;
             border: none;
             border-radius: 4px;
-            background-color: hsl(230, 62%, 56%);
+            background-color: hsl(0, 78%, 49%);
             color: white;
             cursor: pointer;
             font-weight: 500;

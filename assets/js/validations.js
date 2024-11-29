@@ -17,6 +17,7 @@ const registerValidate = () => {
   return true;
 };
 
+
 // JavaScript for password validation and strength check
 function checkPasswordStrength() {
   const password = document.getElementById("SignUp-pass").value;
@@ -58,9 +59,6 @@ function checkPasswordStrength() {
       strengthText.textContent = "Weak"; // Less than three criteria met
   }
 }
-
-
-
 
 
 function validateForm() {
