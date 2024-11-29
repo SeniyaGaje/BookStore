@@ -20,3 +20,11 @@
 [2024-11-27 19:13:41] Successful login for email: seniya02@gmail.com.
 [2024-11-27 23:41:40] Login attempt for email: seniya02@gmail.com
 [2024-11-27 23:41:41] Successful login for email: seniya02@gmail.com.
+[2024-11-29 09:47:59] Login attempt for email: nuskan@gmail.com
+[2024-11-29 09:47:59] Successful login for email: nuskan@gmail.com.
+[2024-11-29 10:02:15] Login attempt for email: nuskan@gmail.com
+[2024-11-29 10:02:15] Successful login for email: nuskan@gmail.com.
+[2024-11-29 10:32:37] Login attempt for email: vidunijinadasa@gmail.com
+[2024-11-29 10:32:37] Successful login for email: vidunijinadasa@gmail.com.
+[2024-11-29 10:34:17] Login attempt for email: vidunijinadasa@gmail.com
+[2024-11-29 10:34:17] Successful login for email: vidunijinadasa@gmail.com.

@@ -6,9 +6,9 @@
     include "../shared/DBconnection.php";
     include "../shared/common.php";
 
-    $name = $_POST["SignUp-Name"];
-    $email = $_POST["SignUp-email"];
-    $password = $_POST["SignUp-pass"];
+    $name =htmlspecialchars($_POST["SignUp-Name"]);
+    $email =htmlspecialchars($_POST["SignUp-email"]);
+    $password =htmlspecialchars($_POST["SignUp-pass"]);
 
     try{
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
@@ -26,7 +26,6 @@
     }
     catch(Exception $e){
         $_SESSION["logged"]="";
-        echo "<h1>Something went wrong.</h1>Error: {$e->getMessage()}<br /> <br /><a href='../index.php'>Click</a> to redirect to homepage";
     }
 
     $stmt->close();

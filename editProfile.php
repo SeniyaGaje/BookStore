@@ -1,22 +1,38 @@
 <?php
 include "./shared/DBconnection.php";
 include "./shared/common.php";
+
 if ($_SESSION["logged"] == "") {
     die("You have to login to edit profile");
 }
+
 if (isset($_POST['submit'])) {
     $newPassword = $_POST['pass'];
     $userName = $_POST['name'];
 
-    $updateQuery = "UPDATE users SET userName = '$userName', userPass = '$newPassword' WHERE userEmail = '{$_SESSION['logged']}';";
+    // Prepare the update query
+    $updateQuery = "UPDATE users SET userName = ?, userPass = ? WHERE userEmail = ?";
 
-    if ($connection->query($updateQuery) === TRUE) {
-        die("<h1>Profile updated successfully.</h1> <a href='./index.php'>Click</a> to redirect to homepage");
+    // Initialize prepared statement
+    if ($stmt = $connection->prepare($updateQuery)) {
+        // Bind parameters to the query
+        $stmt->bind_param("sss", $userName, $newPassword, $_SESSION['logged']);
+
+        // Execute the query
+        if ($stmt->execute()) {
+            die("<h1>Profile updated successfully.</h1> <a href='./index.php'>Click</a> to redirect to homepage");
+        } else {
+            die("<h1>Error updating account.</h1>Error: {$stmt->error}<br /> <br /><a href='./index.php'>Click</a> to redirect to homepage");
+        }
+
+        // Close the statement
+        $stmt->close();
     } else {
-        die("<h1>Error updating account.</h1>Error: {$connection->error}<br /> <br /><a href='./index.php'>Click</a> to redirect to homepage");
+        die("<h1>Error preparing query.</h1>Error: {$connection->error}<br /> <br /><a href='./index.php'>Click</a> to redirect to homepage");
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

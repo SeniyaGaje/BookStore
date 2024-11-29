@@ -1,12 +1,12 @@
 <?php
-include "./shared/DBconnection.php";  // Ensure you are including the correct path to your DB connection
+include "./shared/DBconnection.php"; // Ensure correct path to your DB connection
 session_start();
 
 $message = "";
 
 // Check if reset email exists in session
 if (!isset($_SESSION['resetEmail'])) {
-    // If the session doesn't contain the email, redirect to forgot password page
+    // Redirect to forgot password page if email is missing
     header("Location: forgotPassword.php");
     exit();
 }
@@ -15,31 +15,46 @@ if (isset($_POST['submit'])) {
     $newPassword = $_POST['newPassword'];
     $confirmPassword = $_POST['confirmPassword'];
 
-    // Check if new password and confirm password match
+    // Validate that passwords match
     if ($newPassword === $confirmPassword) {
-        $email = $_SESSION['resetEmail'];
+        // Validate password strength (example: at least 8 characters, one special character)
+        if (strlen($newPassword) >= 8 && preg_match('/[A-Za-z].*[0-9]|[0-9].*[A-Za-z]/', $newPassword)) {
+            $email = $_SESSION['resetEmail'];
 
-        // Hash the new password before saving to the database
-        $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
+            // Hash the new password before saving
+            $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
 
-        // Use the correct column name for password in your database
-        $query = "UPDATE users SET userPass = '$hashedPassword' WHERE userEmail = '$email'";  // Adjust 'userPassword' to match your column name
-        if ($connection->query($query)) {
-            $message = "Password successfully updated!";
-            // Clear the session after password update
-            session_destroy();
-            // Redirect to index.php after the password update
-            header("Location: index.php");
-            exit();
+            // Prepare query to update the password
+            $query = "UPDATE users SET userPass = ? WHERE userEmail = ?";
+
+            // Initialize prepared statement
+            if ($stmt = $connection->prepare($query)) {
+                // Bind parameters to the query
+                $stmt->bind_param("ss", $hashedPassword, $email);
+
+                // Execute the query
+                if ($stmt->execute()) {
+                    $message = "Password successfully updated!";
+                    session_destroy(); // Clear session
+                    header("Location: index.php"); // Redirect to login
+                    exit();
+                } else {
+                    $message = "Error updating password: {$stmt->error}";
+                }
+
+                // Close the prepared statement
+                $stmt->close();
+            } else {
+                $message = "Error preparing query.";
+            }
         } else {
-            $message = "Error updating password!";
+            $message = "Password must be at least 8 characters long and contain both letters and numbers.";
         }
     } else {
         $message = "Passwords do not match!";
     }
 }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -54,144 +69,137 @@ if (isset($_POST['submit'])) {
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 50px;
+            margin: 0;
             font-family: "Montserrat", sans-serif;
             background-color: #f5f5f5;
         }
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-            background-color: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
+
+        .container {
+            max-width: 350px;
             width: 100%;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        label {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #555;
+        }
+
         input[type="password"] {
             width: 100%;
-            padding: 10px;
+            padding: 8px;
+            font-size: 0.9rem;
+            margin-top: 5px;
             border-radius: 4px;
-            border: 1px solid hsl(230, 50%, 85%);
-            background-color: hsl(230, 100%, 97%);
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
         }
+
         button {
-            padding: 10px 15px;
+            width: 100%;
+            padding: 10px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: white;
+            background-color: #007bff;
             border: none;
             border-radius: 4px;
-            background-color: hsl(230, 62%, 56%);
-            color: white;
             cursor: pointer;
-            font-weight: 500;
-        }
-        button:hover {
-            background-color: hsl(230, 62%, 50%);
-        }
-        .message {
-            text-align: center;
-            color: hsl(0, 100%, 40%);
-            font-weight: 600;
-        }
-        .strength {
             margin-top: 10px;
         }
-        .strength span {
-            display: block;
-            height: 10px;
-            background-color: lightgray;
-            border-radius: 5px;
+
+        button:hover {
+            background-color: #0056b3;
         }
-        .strength.weak span {
-            background-color: red;
+
+        .form-check {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 10px;
         }
-        .strength.medium span {
-            background-color: orange;
+
+        .form-check-label {
+            font-size: 0.85rem;
+            color: #666;
         }
-        .strength.strong span {
-            background-color: green;
+
+        .message {
+            margin-top: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: red;
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <h2>Update Password</h2>
+        <form method="post" onsubmit="return validatePassword()">
+            <div class="form-group">
+                <label for="newPassword">New Password:</label>
+                <input type="password" name="newPassword" id="newPassword" required oninput="checkPasswordStrength()">
+            </div>
 
-<form method="post" onsubmit="return validatePassword()">
-    <h2>Update Password</h2>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm New Password:</label>
+                <input type="password" name="confirmPassword" id="confirmPassword" required>
+            </div>
 
-    <div>
-        <label for="newPassword">New Password:</label>
-        <input type="password" name="newPassword" id="newPassword" required oninput="checkPasswordStrength()">
-        <div class="strength" id="passwordStrength">
-            <span></span>
-        </div>
+            <div class="form-check">
+                <input type="checkbox" id="showPassword" onclick="togglePasswordVisibility()">
+                <label for="showPassword" class="form-check-label">Show Password</label>
+            </div>
+
+            <button type="submit" name="submit">Submit</button>
+
+            <?php if (!empty($message)): ?>
+                <p class="message"><?php echo $message; ?></p>
+            <?php endif; ?>
+        </form>
     </div>
 
-    <div>
-        <label for="confirmPassword">Confirm New Password:</label>
-        <input type="password" name="confirmPassword" id="confirmPassword" required>
-    </div>
+    <script>
+        function togglePasswordVisibility() {
+            const newPassword = document.getElementById("newPassword");
+            const confirmPassword = document.getElementById("confirmPassword");
+            const showPassword = document.getElementById("showPassword");
 
-    <div>
-        <input type="checkbox" id="showPassword" onclick="togglePasswordVisibility()"> Show Password
-    </div>
-
-    <button type="submit" name="submit">Submit</button>
-
-    <?php if (!empty($message)): ?>
-        <p class="message"><?php echo $message; ?></p>
-    <?php endif; ?>
-</form>
-
-<script>
-    function togglePasswordVisibility() {
-        const newPassword = document.getElementById("newPassword");
-        const confirmPassword = document.getElementById("confirmPassword");
-        const showPassword = document.getElementById("showPassword");
-
-        if (showPassword.checked) {
-            newPassword.type = "text";
-            confirmPassword.type = "text";
-        } else {
-            newPassword.type = "password";
-            confirmPassword.type = "password";
+            if (showPassword.checked) {
+                newPassword.type = "text";
+                confirmPassword.type = "text";
+            } else {
+                newPassword.type = "password";
+                confirmPassword.type = "password";
+            }
         }
-    }
 
-    function checkPasswordStrength() {
-        const password = document.getElementById("newPassword").value;
-        const strengthIndicator = document.getElementById("passwordStrength");
+        function validatePassword() {
+            const newPassword = document.getElementById("newPassword").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
 
-        let strength = 0;
-
-        // Check the strength of the password
-        if (password.length >= 8) strength++;
-        if (/[A-Z]/.test(password)) strength++;
-        if (/[0-9]/.test(password)) strength++;
-        if (/[\W]/.test(password)) strength++;
-
-        // Set strength class and indicator based on conditions
-        if (strength === 0) {
-            strengthIndicator.className = "strength";
-        } else if (strength === 1) {
-            strengthIndicator.className = "strength weak";
-        } else if (strength === 2) {
-            strengthIndicator.className = "strength medium";
-        } else {
-            strengthIndicator.className = "strength strong";
+            if (newPassword !== confirmPassword) {
+                alert("Passwords do not match!");
+                return false;
+            }
+            return true;
         }
-    }
-
-    function validatePassword() {
-        const newPassword = document.getElementById("newPassword").value;
-        const confirmPassword = document.getElementById("confirmPassword").value;
-
-        if (newPassword !== confirmPassword) {
-            alert("Passwords do not match!");
-            return false;
-        }
-        return true;
-    }
-</script>
-
+    </script>
 </body>
 </html>

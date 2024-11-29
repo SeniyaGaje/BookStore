@@ -43,3 +43,19 @@
 [27-Nov-2024 23:41:41 Asia/Colombo] PHP Stack trace:
 [27-Nov-2024 23:41:41 Asia/Colombo] PHP   1. {main}() C:\wamp64\www\Book-Store\actions\login.php:0
 [27-Nov-2024 23:41:41 Asia/Colombo] PHP   2. session_start() C:\wamp64\www\Book-Store\actions\login.php:64
+[29-Nov-2024 09:47:59 Asia/Colombo] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\wamp64\www\BookStore\actions\login.php on line 64
+[29-Nov-2024 09:47:59 Asia/Colombo] PHP Stack trace:
+[29-Nov-2024 09:47:59 Asia/Colombo] PHP   1. {main}() C:\wamp64\www\BookStore\actions\login.php:0
+[29-Nov-2024 09:47:59 Asia/Colombo] PHP   2. session_start() C:\wamp64\www\BookStore\actions\login.php:64
+[29-Nov-2024 10:02:15 Asia/Colombo] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\wamp64\www\BookStore\actions\login.php on line 64
+[29-Nov-2024 10:02:15 Asia/Colombo] PHP Stack trace:
+[29-Nov-2024 10:02:15 Asia/Colombo] PHP   1. {main}() C:\wamp64\www\BookStore\actions\login.php:0
+[29-Nov-2024 10:02:15 Asia/Colombo] PHP   2. session_start() C:\wamp64\www\BookStore\actions\login.php:64
+[29-Nov-2024 10:32:37 Asia/Colombo] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\wamp64\www\BookStore\actions\login.php on line 64
+[29-Nov-2024 10:32:37 Asia/Colombo] PHP Stack trace:
+[29-Nov-2024 10:32:37 Asia/Colombo] PHP   1. {main}() C:\wamp64\www\BookStore\actions\login.php:0
+[29-Nov-2024 10:32:37 Asia/Colombo] PHP   2. session_start() C:\wamp64\www\BookStore\actions\login.php:64
+[29-Nov-2024 10:34:17 Asia/Colombo] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\wamp64\www\BookStore\actions\login.php on line 64
+[29-Nov-2024 10:34:17 Asia/Colombo] PHP Stack trace:
+[29-Nov-2024 10:34:17 Asia/Colombo] PHP   1. {main}() C:\wamp64\www\BookStore\actions\login.php:0
+[29-Nov-2024 10:34:17 Asia/Colombo] PHP   2. session_start() C:\wamp64\www\BookStore\actions\login.php:64

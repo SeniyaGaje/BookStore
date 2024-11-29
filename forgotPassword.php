@@ -14,20 +14,40 @@ if (isset($_POST['submit'])) {
     if ($step == 1 && isset($_POST['email'])) {
         $email = $_POST['email'];
 
-        // Check if the email exists in the database
-        $query = "SELECT * FROM users WHERE userEmail = '$email'";
-        $result = $connection->query($query);
+        // Sanitize email to avoid XSS attacks
+        $email = filter_var($email, FILTER_SANITIZE_EMAIL);
 
-        if ($result->num_rows > 0) {
-            $verificationCode = rand(100000, 999999);  // Generate verification code
-            $_SESSION['verificationCode'] = $verificationCode;
-            $_SESSION['resetEmail'] = $email;
-
-            // For demo purposes, display the code (replace with email logic)
-            $message = "Verification code sent to your email: $verificationCode";
-            $_SESSION['step'] = 2;  // Move to Step 2 (Verification Code)
+        // Check if the email is valid
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $message = "Invalid email format!";
         } else {
-            $message = "Email not found!";
+            // Prepare query to check if email exists
+            $query = "SELECT * FROM users WHERE userEmail = ?";
+            if ($stmt = $connection->prepare($query)) {
+                // Bind the email parameter
+                $stmt->bind_param("s", $email);
+
+                // Execute the query
+                $stmt->execute();
+                $result = $stmt->get_result();
+
+                if ($result->num_rows > 0) {
+                    $verificationCode = rand(100000, 999999);  // Generate verification code
+                    $_SESSION['verificationCode'] = $verificationCode;
+                    $_SESSION['resetEmail'] = $email;
+
+                    // For demo purposes, display the code (replace with email logic)
+                    $message = "Verification code sent to your email: $verificationCode";
+                    $_SESSION['step'] = 2;  // Move to Step 2 (Verification Code)
+                } else {
+                    $message = "Email not found!";
+                }
+
+                // Close the prepared statement
+                $stmt->close();
+            } else {
+                $message = "Error preparing query.";
+            }
         }
     } elseif ($step == 2 && isset($_POST['code'])) {
         $enteredCode = $_POST['code'];
@@ -41,9 +61,10 @@ if (isset($_POST['submit'])) {
     }
 
     // Update the step variable in the session after processing the form
-    $step = $_SESSION['step'];
+    $_SESSION['step'] = $step;
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

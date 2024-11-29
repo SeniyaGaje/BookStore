@@ -1,7 +1,7 @@
 <?php
     $server = "localhost";
     $username = "root";
-    $password = "";
+    $password = "Ayomal2002";
     $database = "book_shop";
 
     try{
@@ -15,3 +15,4 @@
         die("Database Connection Error: {$e->getMessage()}");
     }
 ?>
+
