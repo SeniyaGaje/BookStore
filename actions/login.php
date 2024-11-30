@@ -1,6 +1,6 @@
 <?php
 
-// Set the time zone
+//  time zone
 date_default_timezone_set('Asia/Colombo');
 
 // Custom logging function
